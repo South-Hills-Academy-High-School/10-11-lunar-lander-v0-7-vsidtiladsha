@@ -135,3 +135,11 @@ game.onUpdate(function () {
         gameOverFlag += 1
     }
 })
+game.onUpdate(function () {
+    if (Math.round(apple.x) == 27.5 * 16 && apple.vx > 0) {
+        apple.x = 5.5 * 16
+    }
+    if (Math.round(apple.x) == 5.5 * 16 && apple.vx < 0) {
+        apple.x = 27.5 * 16
+    }
+})
